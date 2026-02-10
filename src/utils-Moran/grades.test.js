@@ -1,22 +1,25 @@
 const { calcWeightedGrade, percentile } = require('./grades');
 
 describe('calcWeightedGrade', () => {
-  describe('casos válidos', () => {
-    test('caso de referencia: [80,0.4], [90,0.6] debe devolver 86.00', () => {
+  describe('CASOS DE REFERENCIA OBLIGATORIOS', () => {
+    test('CASO REFERENCIA: calcWeightedGrade([{score:80,weight:0.4},{score:90,weight:0.6}]) retorna 86.00', () => {
       const items = [
         { score: 80, weight: 0.4 },
         { score: 90, weight: 0.6 }
       ];
       expect(calcWeightedGrade(items)).toBe(86.00);
     });
+  });
 
-    test('un solo elemento con peso uno', () => {
+  describe('casos válidos adicionales', () => {
+    test('un solo elemento con peso 1', () => {
       const items = [{ score: 75, weight: 1.0 }];
       expect(calcWeightedGrade(items)).toBe(75.00);
     });
+    
     test('tres elementos con pesos validos', () => {
       const items = [
-     { score: 100, weight: 0.3 },
+        { score: 100, weight: 0.3 },
         { score: 80, weight: 0.3 },
         { score: 90, weight: 0.4 }
       ];
@@ -96,13 +99,21 @@ describe('calcWeightedGrade', () => {
 });
 
 describe('percentile', () => {
-  describe('casos válidos', () => {
-    test('casos de referencia especificados', () => {
+  describe('CASOS DE REFERENCIA OBLIGATORIOS', () => {
+    test('CASO REFERENCIA: percentile(0,[1,2,3]) retorna 1.00', () => {
       expect(percentile(0, [1, 2, 3])).toBe(1.00);
-      expect(percentile(100, [1, 2, 3])).toBe(3.00);
-      expect(percentile(50, [1, 2, 3, 4])).toBe(2.00);
     });
 
+    test('CASO REFERENCIA: percentile(100,[1,2,3]) retorna 3.00', () => {
+      expect(percentile(100, [1, 2, 3])).toBe(3.00);
+    });
+
+    test('CASO REFERENCIA: percentile(50,[1,2,3,4]) retorna 2.00 (nearest-rank)', () => {
+      expect(percentile(50, [1, 2, 3, 4])).toBe(2.00);
+    });
+  });
+
+  describe('casos válidos adicionales', () => {
     test('un solo elemento', () => {
       expect(percentile(0, [5])).toBe(5.00);
       expect(percentile(50, [5])).toBe(5.00);

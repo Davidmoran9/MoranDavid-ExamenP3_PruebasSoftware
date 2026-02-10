@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Presentación de David Moran</title>
+  <title>Perfil — Notas & Estadística</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f4f8;
+      background-color: #f0f4f8;
       color: #333;
     }
 
@@ -18,20 +19,44 @@
       color: white;
       padding: 20px;
       text-align: center;
+      border-bottom: 4px solid #7b02bc;
     }
 
     main {
+      max-width: 700px;
+      margin: 30px auto;
       padding: 20px;
-      max-width: 600px;
-      margin: 20px auto;
-      background: white;
-      border-radius: 8px;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid #ddd;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    h1 {
+    section {
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #9603e5;
       margin-top: 0;
-      color: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #f3e8ff;
     }
 
     footer {
@@ -39,9 +64,7 @@
       color: white;
       text-align: center;
       padding: 15px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      margin-top: 40px;
     }
 
     a {
@@ -54,22 +77,62 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <h1>David Moran</h1>
+    <h1>Perfil Académico</h1>
   </header>
 
   <main>
-    <p><strong>Correo:</strong> <a href="mailto:ldmoran@espe.edu.ec">ldmoran@espe.edu.ec</a></p>
-    <p><strong>NRC:</strong> 27854</p>
-    <p><strong>Edad:</strong> 22 años</p>
-    <p><strong>Estudio en:</strong> ESPE</p>
-    <p><strong>Descripción:</strong> Me gusta leer y crear páginas web con animaciones simples.</p>
+
+    <section>
+      <h2>Datos personales</h2>
+      <p><strong>Nombre:</strong> David Moran</p>
+      <p><strong>NRC:</strong> 27854</p>
+      <p><strong>Correo institucional:</strong> <a href="mailto:ldmoran@espe.edu.ec">ldmoran@espe.edu.ec</a></p>
+    </section>
+
+    <section>
+      <h2>Presentación</h2>
+      <p>
+        Soy estudiante de la ESPE con interés en el desarrollo de software y la creación
+        de páginas web. Me gusta aprender nuevas tecnologías y mejorar mis habilidades
+        en programación. Disfruto leer y diseñar interfaces sencillas con animaciones
+        básicas que mejoren la experiencia del usuario.
+      </p>
+    </section>
+
+    <section>
+      <h2>Asignaturas y calificaciones (simuladas)</h2>
+      <table>
+        <tr>
+          <th>Asignatura</th>
+          <th>Calificación</th>
+        </tr>
+        <tr>
+          <td>Probabilidad y Estadística</td>
+          <td>9.2</td>
+        </tr>
+        <tr>
+          <td>Pruebas de Software</td>
+          <td>8.8</td>
+        </tr>
+        <tr>
+          <td>Desarrollo Web</td>
+          <td>9.5</td>
+        </tr>
+        <tr>
+          <td>Bases de Datos</td>
+          <td>8.9</td>
+        </tr>
+      </table>
+    </section>
+
   </main>
 
   <footer>
-    &copy; 2026 David Moran, Examen P3 Pruebas de Software
+    © 2026 David Moran — Notas & Estadística
   </footer>
 
 </body>
