@@ -1,5 +1,8 @@
 module.exports = [
     {
+        ignores: ['coverage/**', 'node_modules/**', 'dist/**', 'build/**']
+    },
+    {
         files: ['**/*.js'],
         languageOptions: {
             ecmaVersion: 'latest',

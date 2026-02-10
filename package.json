@@ -5,7 +5,23 @@
   "scripts": {
     "start": "node index.js",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "eslint"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "lines": 85,
+        "branches": 85,
+        "functions": 85,
+        "statements": 85
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js",
+      "!coverage/**"
+    ]
   },
   "keywords": [],
   "author": "",

@@ -24,5 +24,8 @@ jobs:
       - name: Lint del codigo
         run: npm run lint
 
-      - name: Ejecutar Pruebas
-        run: npm test
+      - name: Ejecutar Pruebas con Verificacion de Cobertura
+        run: npm run test:coverage
+
+      - name: Auditoria de Seguridad
+        run: npm audit --audit-level=moderate
