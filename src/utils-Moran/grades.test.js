@@ -11,7 +11,7 @@ describe('calcWeightedGrade', () => {
     });
   });
 
-  describe('casos válidos adicionales', () => {
+  describe('casos validos adicionales', () => {
     test('un solo elemento con peso 1', () => {
       const items = [{ score: 75, weight: 1.0 }];
       expect(calcWeightedGrade(items)).toBe(75.00);

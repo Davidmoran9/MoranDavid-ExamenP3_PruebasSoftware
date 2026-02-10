@@ -24,7 +24,10 @@ jobs:
       - name: Lint del codigo
         run: npm run lint
 
-      - name: Ejecutar Pruebas con Verificacion de Cobertura
+      - name: Ejecutar Pruebas Unitarias
+        run: npx jest --verbose --passWithNoTests
+
+      - name: Verificar Cobertura de Codigo (≥85%)
         run: npm run test:coverage
 
       - name: Auditoria de Seguridad
